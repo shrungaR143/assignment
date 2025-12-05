@@ -1,0 +1,121 @@
+/* 1. Global Reset & Basic Setup */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+/* 2. Header Container Styling */
+.main-header {
+    padding: 15px 30px; 
+    background-color: #333333; 
+    color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+    /* Flexbox for alignment */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* 3. Logo Styling */
+.logo {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: white;
+    text-decoration: none; 
+}
+
+/* 4. Navigation Styling (The Menu) */
+.main-nav ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.main-nav li {
+    margin-left: 20px; 
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s; 
+}
+
+.main-nav a:hover {
+    background-color: #555; 
+    border-radius: 4px;
+}
+
+
+
+/* 1. Centering the Title */
+.section-title {
+    text-align: center; /* Puts the text in the exact center */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #2c3e50;
+}
+
+/* 2. Video Grid Container */
+.video-grid {
+    /* Use CSS Grid for a clean, structural layout */
+    display: grid;
+    
+    /* Create three equal-width columns */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* Space between the videos */
+    gap: 30px; 
+    
+    /* Add padding around the grid */
+    padding: 0 50px; 
+    max-width: 1200px;
+    margin: 0 auto 50px auto; /* Centers the whole grid */
+}
+
+/* 3. Individual Video Item */
+.video-item {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the iframe fits within the border radius */
+}
+
+/* 4. Caption Styling */
+.video-caption {
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 5. Responsive Video Embedding (Key for iFrames) */
+.video-item iframe {
+    /* Make the iframe take up 100% of its parent container's width */
+    width: 100%;
+    /* Set a fixed aspect ratio for video players */
+    height: 200px; 
+    display: block;
+}
+
+/* 6. Making it responsive for smaller screens */
+@media (max-width: 768px) {
+    /* Change to two columns on tablets */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Change to a single column on mobile phones */
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
