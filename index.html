@@ -6,6 +6,24 @@
     <title>Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> </head>
+    <link rel="icon" href="1 (2).png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () 
+        {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const body = document.body;
+
+            darkModeToggle.addEventListener('click', () => 
+            {
+                body.classList.toggle('dark-mode');
+                const currentMode = body.classList.contains('dark-mode') ? 'Dark' : 'Light';
+                darkModeToggle.querySelector('i').classList.toggle('fa-sun'); // Change icon
+                darkModeToggle.querySelector('i').classList.toggle('fa-moon'); // Change icon
+                darkModeToggle.querySelector('i').classList.toggle('light-mode'); // Change icon color
+            });
+        });
+    </script>
+
 <body>
 
     <nav class="utility-bar">
@@ -32,6 +50,9 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
+                <div id="dark-mode-toggle" class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
             </ul>
         </nav>
     </header>

@@ -54,11 +54,9 @@ body {
     border-radius: 4px;
 }
 
-
-
 /* 1. Centering the Title */
 .section-title {
-    text-align: center; /* Puts the text in the exact center */
+    text-align: center; 
     margin-top: 50px;
     margin-bottom: 30px;
     font-size: 2.2em;
@@ -123,6 +121,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
 /* Unique Style for the Second Navbar (Utility Bar) */
 .utility-bar {
     background-color: #333333; 
@@ -165,4 +164,23 @@ body {
 
 .utility-bar i {
     margin-right: 5px; 
+}
+
+
+/* CSS for Dark Mode */
+.dark-mode 
+{
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode button 
+{
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode p 
+{
+    color: #fff;
 }
